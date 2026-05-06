@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dua App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #eef6ff;
+            margin-top: 80px;
+        }
+        #box {
+            background: white;
+            display: inline-block;
+            padding: 25px;
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        }
+        #category {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        #dua {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dua App</h1>
+
+    <div id="box">
+        <div id="category">Category will appear here</div>
+        <p id="dua">Click the button to see a Dua</p>
+        <button onclick="showDua()">New Dua</button>
+    </div>
+
+    <script>
+        let duas = [
+            { text: "اللهم اغفر لي وارحمني", category: "Forgiveness" },
+            { text: "رب اغفر لي ولوالدي", category: "For Parents" },
+            { text: "اللهم ارزقني علمًا نافعًا", category: "Knowledge" },
+            { text: "اللهم ارزقني الرزق الحلال", category: "Rizq (Provision)" },
+            { text: "اللهم اهدني فيمن هديت", category: "Guidance" },
+            { text: "اللهم إني أسألك العفو والعافية", category: "Health & Protection" },
+            { text: "ربنا آتنا في الدنيا حسنة", category: "World & Hereafter" },
+            { text: "استغفر الله العظيم", category: "Istighfar" },
+            { text: "اللهم اغفر لي ذنبي كله دقه وجله", category: "Forgiveness" },
+            { text: "اللهم ارحم والدي كما ربياني صغيرا", category: "For Parents" },
+            { text: "اللهم ارزقني رزقًا حلالًا طيبًا", category: "Rizq (Provision)" },
+            { text: "اللهم ثبتني على دينك", category: "Faith & Guidance" },
+            { text: "اللهم احفظني من كل سوء", category: "Protection" },
+            { text: "اللهم اجعلني من الصابرين", category: "Patience" },
+            { text: "اللهم نور قلبي بالعلم والإيمان", category: "Knowledge & Iman" },
+            { text: "اللهم ارزقني حسن الخاتمة", category: "Akhirah (Hereafter)" },
+            { text: "يا الله أصلح لي شأني كله", category: "Life Affairs" },
+            { text: "اللهم اشفني وعافني", category: "Health" },
+            { text: "اللهم بارك لي في وقتي", category: "Time & Productivity" },
+            { text: "اللهم ارزقني التوفيق في دراستي", category: "Study" },
+            { text: "اللهم اجعلني من الذاكرين لك", category: "Dhikr" },
+            { text: "اللهم إني أسألك الجنة", category: "Paradise" },
+            { text: "اللهم قني عذاب النار", category: "Protection (Hellfire)" },
+            { text: "رب اشرح لي صدري ويسر لي أمري", category: "Ease & Success" },
+            { text: "اللهم اجعلني نورًا للمسلمين", category: "Good Deeds" },
+            { text: "اللهم ارزقني قلبًا سليمًا", category: "Heart Purity" },
+            { text: "اللهم اجعلني من عبادك الصالحين", category: "Righteousness" },
+            { text: "اللهم احفظ أهلي وأحبتي", category: "Family Protection" }
+        ];
+
+        function showDua() {
+            let randomIndex = Math.floor(Math.random() * duas.length);
+            document.getElementById("dua").innerHTML = duas[randomIndex].text;
+            document.getElementById("category").innerHTML = "Category: " + duas[randomIndex].category;
+        }
+    </script>
+
+</body>
+</html>
